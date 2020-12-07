@@ -47,7 +47,7 @@ def get_comments(url):
     # parse the YouTube initial data in the <script> tag
     data_str = find_value(res.text, 'window["ytInitialData"] = ', num_sep_chars=0, separator="\n").rstrip(";")
     # convert to Python dictionary instead of plain text string
-    print(data_str)
+    #print(data_str)
     data = json.loads(data_str)
     # search for the ctoken & continuation parameter fields
     for r in search_dict(data, "itemSectionRenderer"):
