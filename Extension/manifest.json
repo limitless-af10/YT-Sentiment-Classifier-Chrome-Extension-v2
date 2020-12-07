@@ -1,0 +1,25 @@
+{ 
+  "name": "YT sentiment classifier",
+  "version": "1.0",
+  "manifest_version": 2,
+  "content_scripts": [
+      {
+          "matches": ["*://*.youtube.com/*"],
+          "js": ["content.js"],
+          "all_frames": true
+      }
+  ],
+  "browser_action": {
+      "default_popup": "popup.html",
+      "default_title": "ok"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "http://localhost/",
+    "webNavigation",
+    "tabs"
+  ]
+}
