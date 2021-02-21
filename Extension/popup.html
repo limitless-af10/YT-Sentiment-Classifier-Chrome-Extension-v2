@@ -6,6 +6,12 @@
             body {
                 font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
                 font-size: 100%;
+                width: 300px;
+                height: 300px;
+                background-color :#333;
+                background-image: url('images/rsz.png');
+                z-index: -2;
+                
             }
             #status {
                 white-space: pre;
@@ -13,10 +19,46 @@
                 overflow: hidden;
                 max-width: 400px;
             }
+
+            h4{
+                text-align: center;
+                color: floralwhite;
+                font-family: 'Nunito', sans-serif;
+            }
+
+            .container {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+            .tint {
+                        z-index: -1;
+                        height: 96%;
+                        width: 96%;
+                        position: absolute;
+                        top: 5px;
+                        left: 5px;
+                        background: rgba(0, 0, 0, 0.7);
+                        border: 2px solid #000000;
+                        border-radius: 2px;
+                    }
+
         </style>
+        <script type='text/javascript' src='Chart.js'></script>
         <script src="popup.js"></script>
     </head>
     <body>
-        <p id="text"></p>
+        
+        <div class = "tint">
+            <span class = "whitecontent"></span>
+        </div>
+        <div class="container">
+            <div>
+                <h4 id="text"></h4>
+                <canvas id="chart"></canvas>
+            </div>
+        </div>
+        
     </body>
 </html>
